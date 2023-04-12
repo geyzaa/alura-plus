@@ -1,0 +1,50 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --azul-botao: #167BF7;
+    --cor-fundo: #00030C;
+}
+
+/* usado para tirar as marcações já existentes na pagweb*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--branco-principal);
+}
+
+/*então se for importante para o conteúdo a imagem deve ser colocada no html
+se for só decorativa deve ser inserida como backgroud de algum elemento*/
+.principal {
+    background-image: url(img/Background.png);
+    background-repeat: no-repeat;
+    /*p imagem não aparecer duplicada na tela*/
+    background-size: contain;
+    /*faz a imagem se ajustar ao container, nesse caso, a section*/
+}
+
+/*vh significa viewport height (seria a altura da tela do dispositivo)
+vai detectar a altura da tela (por casa do meta dado no html) e vai usar 100%*/
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__botao {
+    background-color: var(--azul-botao);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+
+    display: block;
+    text-decoration: none;
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
